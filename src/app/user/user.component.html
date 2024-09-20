@@ -1,0 +1,6 @@
+<div class="bg-slate-600 sm:w-[250px] rounded-md overflow-hidden mb-3 " >
+    <button class="flex flex-row items-center justify-between  w-full p-2" (click)="onSelectUser()" [ngStyle]="{ 'background-color': selected ? '#3B82F6' : '#1E293B' }">
+        <img [src]="imagePath" [alt]="user.name" class="h-10 w-10 rounded-full"/>
+        <div class="text-slate-300 ">{{user.name}}</div>
+    </button>
+</div>

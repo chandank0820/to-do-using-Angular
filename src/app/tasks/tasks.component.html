@@ -1,0 +1,22 @@
+<section class="sm:w-[400px] bg-[#1E293B] text-slate-300 p-4 rounded-md">
+    <header class="w-full flex flex-row justify-between items-center">
+        <h2>{{name}}'s task</h2>
+        <menu>
+            <button class="bg-[#3B82F6] rounded-md p-2 text-slate-300">Add Task</button>
+        </menu>
+        
+    </header>
+    <ul>
+        @for(task of selectedUserTasks; track task.id){
+            <li>
+                <app-task [task]="task" (complete)="onCompleteTask($event)" >
+    
+                </app-task>
+            </li>
+        }
+            
+       </ul>
+       
+
+   
+</section>
